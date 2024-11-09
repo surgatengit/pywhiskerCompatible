@@ -28,6 +28,9 @@ from dsinternals.system.DateTime import DateTime
 
 from rich.console import Console
 
+args = None
+logger = None
+
 def get_machine_name(args, domain):
     if args.dc_ip is not None:
         s = SMBConnection(args.dc_ip, args.dc_ip)
@@ -803,8 +806,9 @@ def main():
     #if args.action == 'write' and args.delegate_from is None:
         #logger.error('`-delegate-from` should be specified when using `-action write` !')
         #sys.exit(1)
-    
+    global args
     args = parse_args()
+    global logger
     logger = Logger(args.verbosity, args.quiet)
 
     if args.target_samname_list and args.action != 'spray':
