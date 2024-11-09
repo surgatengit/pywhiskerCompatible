@@ -1,3 +1,16 @@
+# Copy Temporal Patch
+fish
+```fish
+virtual venv/
+source venv/bin/activate.fish
+git clone https://github.com/ShutdownRepo/pywhisker
+cd pywhiskerCompatible
+pip install -e .
+cd pywhisker
+# execute
+python pywhisker.py ...
+```
+
 # pyWhisker
 
 pyWhisker is a Python equivalent of the original [Whisker](https://github.com/eladshamir/Whisker) made by [Elad Shamir](https://twitter.com/elad_shamir) and written in C#. This tool allows users to manipulate the `msDS-KeyCredentialLink` attribute of a target user/computer to obtain full control over that object.
