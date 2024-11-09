@@ -1,9 +1,9 @@
-# Copy Temporal Patch
+# Copy Temporal Patch from a Pull Request
 fish
 ```fish
 virtual venv/
 source venv/bin/activate.fish
-git clone https://github.com/ShutdownRepo/pywhisker
+git clone https://github.com/surgatengit/pywhiskerCompatible
 cd pywhiskerCompatible
 pip install -e .
 cd pywhisker
